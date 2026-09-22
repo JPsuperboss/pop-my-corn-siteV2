@@ -1,0 +1,146 @@
+[
+  {
+    "file": "design-01.png",
+    "label": "Coeur",
+    "stars": 1,
+    "grid_w": 14,
+    "grid_h": 14,
+    "colors": 2
+  },
+  {
+    "file": "design-02.png",
+    "label": "Champignon",
+    "stars": 1,
+    "grid_w": 14,
+    "grid_h": 14,
+    "colors": 3
+  },
+  {
+    "file": "design-03.png",
+    "label": "Cactus",
+    "stars": 2,
+    "grid_w": 18,
+    "grid_h": 18,
+    "colors": 3
+  },
+  {
+    "file": "design-04.png",
+    "label": "Étoile",
+    "stars": 2,
+    "grid_w": 18,
+    "grid_h": 18,
+    "colors": 2
+  },
+  {
+    "file": "design-05.png",
+    "label": "Vague",
+    "stars": 3,
+    "grid_w": 22,
+    "grid_h": 22,
+    "colors": 3
+  },
+  {
+    "file": "design-06.png",
+    "label": "Montagne",
+    "stars": 3,
+    "grid_w": 22,
+    "grid_h": 22,
+    "colors": 6
+  },
+  {
+    "file": "design-07.png",
+    "label": "Chat",
+    "stars": 4,
+    "grid_w": 28,
+    "grid_h": 28,
+    "colors": 4
+  },
+  {
+    "file": "design-08.png",
+    "label": "Paysage",
+    "stars": 5,
+    "grid_w": 32,
+    "grid_h": 32,
+    "colors": 8
+  },
+  {
+    "file": "design-09.png",
+    "label": "Hermine",
+    "stars": 3,
+    "grid_w": 20,
+    "grid_h": 20,
+    "colors": 2
+  },
+  {
+    "file": "design-10.png",
+    "label": "Galette-saucisse",
+    "stars": 2,
+    "grid_w": 22,
+    "grid_h": 12,
+    "colors": 4
+  },
+  {
+    "file": "design-11.png",
+    "label": "Galette complète",
+    "stars": 3,
+    "grid_w": 20,
+    "grid_h": 20,
+    "colors": 6
+  },
+  {
+    "file": "design-12.png",
+    "label": "Cidre (bolée)",
+    "stars": 1,
+    "grid_w": 18,
+    "grid_h": 18,
+    "colors": 3
+  },
+  {
+    "file": "design-13.png",
+    "label": "Bretzel",
+    "stars": 2,
+    "grid_w": 12,
+    "grid_h": 14,
+    "colors": 2
+  },
+  {
+    "file": "design-14.png",
+    "label": "Cigale",
+    "stars": 2,
+    "grid_w": 18,
+    "grid_h": 18,
+    "colors": 4
+  },
+  {
+    "file": "design-15.png",
+    "label": "Tropézienne",
+    "stars": 1,
+    "grid_w": 18,
+    "grid_h": 18,
+    "colors": 3
+  },
+  {
+    "file": "design-16.png",
+    "label": "Piment d'Espelette",
+    "stars": 1,
+    "grid_w": 18,
+    "grid_h": 18,
+    "colors": 2
+  },
+  {
+    "file": "design-17.png",
+    "label": "Rentrée des classes",
+    "stars": 2,
+    "grid_w": 16,
+    "grid_h": 16,
+    "colors": 4
+  },
+  {
+    "file": "design-18.png",
+    "label": "Esprit supporter",
+    "stars": 1,
+    "grid_w": 16,
+    "grid_h": 16,
+    "colors": 3
+  }
+]
