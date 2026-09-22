@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kit mosaïque — Pixotile</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo"><span class="pixel"></span>Pixotile</a>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="boutique.html" class="active">Boutique</a>
+      <a href="index.html#comment-ca-marche">Comment ça marche</a>
+    </nav>
+    <a href="panier.html" class="cart-link">🛒 Panier <span class="cart-count">0</span></a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="product-detail" id="detail"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>Pixotile — kits DIY de mosaïque pixel art</div>
+    <div>contact@pixotile.fr</div>
+  </div>
+</footer>
+
+<script src="cart.js"></script>
+<script>
+  const params = new URLSearchParams(location.search);
+  const id = params.get("id");
+  let currentProduct = null;
+
+  loadProducts().then((products) => {
+    currentProduct = products.find((p) => p.id === id) || products[0];
+    renderDetail(currentProduct);
+    document.title = currentProduct.name + " — Pixotile";
+  });
+
+  function renderDetail(p) {
+    const finalWCm = (p.gridW * p.tileSizeCm).toFixed(0);
+    const finalHCm = (p.gridH * p.tileSizeCm).toFixed(0);
+    const tileCount = p.gridW * p.gridH;
+    document.getElementById("detail").innerHTML = `
+      <div class="thumb-large"><img src="${p.image}" alt="${p.name}" /></div>
+      <div>
+        <div class="theme-tag">${p.theme}</div>
+        <h1>${p.name}</h1>
+        <div class="detail-meta">
+          <span class="stars">${starString(p.stars)}</span>
+          <span>·</span>
+          <span>Niveau ${p.stars}/5</span>
+        </div>
+        <p>${p.description}</p>
+        ${p.artist ? `<p class="notice">🎨 Motif créé en collaboration avec <strong>${p.artist}</strong>.</p>` : ""}
+        <div class="detail-price">${formatPrice(p.price)}</div>
+        <ul class="spec-list">
+          <li><span>Taille finale</span><span>${finalWCm} × ${finalHCm} cm</span></li>
+          <li><span>Nombre de tuiles (max.)</span><span>${tileCount}</span></li>
+          <li><span>Taille d'une tuile</span><span>${p.tileSizeCm} cm</span></li>
+          <li><span>Contenu du kit</span><span>Tuiles de verre, plan numéroté, colle, cadre</span></li>
+        </ul>
+        <div class="qty-row">
+          <div class="qty-control">
+            <button id="qty-minus" type="button">−</button>
+            <input id="qty-input" type="text" value="1" readonly />
+            <button id="qty-plus" type="button">+</button>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-block" id="add-btn">Ajouter au panier</button>
+      </div>
+    `;
+
+    let qty = 1;
+    const qtyInput = document.getElementById("qty-input");
+    document.getElementById("qty-minus").addEventListener("click", () => {
+      qty = Math.max(1, qty - 1);
+      qtyInput.value = qty;
+    });
+    document.getElementById("qty-plus").addEventListener("click", () => {
+      qty += 1;
+      qtyInput.value = qty;
+    });
+    document.getElementById("add-btn").addEventListener("click", () => {
+      addToCart(p.id, qty);
+      document.getElementById("add-btn").textContent = "Ajouté ✓";
+      setTimeout(() => (document.getElementById("add-btn").textContent = "Ajouter au panier"), 1200);
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Panier — Pixotile</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo"><span class="pixel"></span>Pixotile</a>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="boutique.html">Boutique</a>
+      <a href="index.html#comment-ca-marche">Comment ça marche</a>
+    </nav>
+    <a href="panier.html" class="cart-link active">🛒 Panier <span class="cart-count">0</span></a>
+  </div>
+</header>
+
+<div class="container cart-page">
+  <h1 class="section-title">Votre panier</h1>
+  <div id="cart-content"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>Pixotile — kits DIY de mosaïque pixel art</div>
+    <div>contact@pixotile.fr</div>
+  </div>
+</footer>
+
+<script src="cart.js"></script>
+<script>
+  let allProducts = [];
+
+  loadProducts().then((products) => {
+    allProducts = products;
+    render();
+  });
+
+  function render() {
+    const cart = getCart();
+    const container = document.getElementById("cart-content");
+    if (cart.length === 0) {
+      container.innerHTML = `
+        <div class="empty-state">
+          <p>Votre panier est vide.</p>
+          <a href="boutique.html" class="btn btn-primary">Voir les kits</a>
+        </div>`;
+      return;
+    }
+
+    const rows = cart.map((item) => {
+      const p = allProducts.find((prod) => prod.id === item.id);
+      if (!p) return "";
+      return `
+        <div class="cart-item">
+          <img src="${p.image}" alt="${p.name}" />
+          <div>
+            <strong>${p.name}</strong><br/>
+            <span class="theme-tag">${p.theme} · ${starString(p.stars)}</span><br/>
+            <span>${formatPrice(p.price)}</span>
+          </div>
+          <div class="qty-control">
+            <button type="button" data-action="dec" data-id="${p.id}">−</button>
+            <input type="text" readonly value="${item.qty}" />
+            <button type="button" data-action="inc" data-id="${p.id}">+</button>
+          </div>
+          <button class="remove" data-action="remove" data-id="${p.id}">Retirer</button>
+        </div>
+      `;
+    }).join("");
+
+    const total = cart.reduce((sum, item) => {
+      const p = allProducts.find((prod) => prod.id === item.id);
+      return sum + (p ? p.price * item.qty : 0);
+    }, 0);
+
+    container.innerHTML = `
+      ${rows}
+      <div class="cart-summary">
+        <div class="total">Total : ${formatPrice(total)}</div>
+        <button class="btn btn-primary" id="checkout-btn">Passer au paiement</button>
+        <div id="checkout-error"></div>
+      </div>
+    `;
+
+    container.querySelectorAll("button[data-action]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.dataset.id;
+        const action = btn.dataset.action;
+        const item = getCart().find((i) => i.id === id);
+        if (action === "inc") setQty(id, item.qty + 1);
+        if (action === "dec") setQty(id, item.qty - 1);
+        if (action === "remove") removeFromCart(id);
+        render();
+      });
+    });
+
+    document.getElementById("checkout-btn").addEventListener("click", checkout);
+  }
+
+  async function checkout() {
+    const btn = document.getElementById("checkout-btn");
+    const errBox = document.getElementById("checkout-error");
+    errBox.innerHTML = "";
+    btn.disabled = true;
+    btn.textContent = "Redirection en cours…";
+    try {
+      const res = await fetch("/.netlify/functions/create-checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ items: getCart() }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.url) {
+        throw new Error(data.error || "Le paiement n'est pas encore configuré.");
+      }
+      window.location.href = data.url;
+    } catch (e) {
+      errBox.innerHTML = `<div class="notice">${e.message}</div>`;
+      btn.disabled = false;
+      btn.textContent = "Passer au paiement";
+    }
+  }
+</script>
+</body>
+</html>

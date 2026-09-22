@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Boutique — Pixotile</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo"><span class="pixel"></span>Pixotile</a>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="boutique.html" class="active">Boutique</a>
+      <a href="index.html#comment-ca-marche">Comment ça marche</a>
+    </nav>
+    <a href="panier.html" class="cart-link">🛒 Panier <span class="cart-count">0</span></a>
+  </div>
+</header>
+
+<section class="steps">
+  <div class="container">
+    <h1 class="section-title">Tous nos kits</h1>
+    <div class="filters" id="theme-filters"></div>
+    <div class="filters" id="star-filters"></div>
+    <div class="product-grid" id="grid"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>Pixotile — kits DIY de mosaïque pixel art</div>
+    <div>contact@pixotile.fr</div>
+  </div>
+</footer>
+
+<script src="cart.js"></script>
+<script>
+  let allProducts = [];
+  let activeTheme = "Tous";
+  let activeStars = 0;
+
+  loadProducts().then((products) => {
+    allProducts = products;
+    const themes = ["Tous", ...new Set(products.map((p) => p.theme))];
+    document.getElementById("theme-filters").innerHTML = themes
+      .map((t) => `<span class="filter-chip ${t === activeTheme ? "active" : ""}" data-theme="${t}">${t}</span>`)
+      .join("");
+    document.getElementById("star-filters").innerHTML =
+      `<span class="filter-chip active" data-stars="0">Tous niveaux</span>` +
+      [1, 2, 3, 4, 5]
+        .map((s) => `<span class="filter-chip" data-stars="${s}">${"★".repeat(s)}</span>`)
+        .join("");
+    attachFilterHandlers();
+    render();
+  });
+
+  function attachFilterHandlers() {
+    document.querySelectorAll("#theme-filters .filter-chip").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        activeTheme = chip.dataset.theme;
+        document.querySelectorAll("#theme-filters .filter-chip").forEach((c) => c.classList.remove("active"));
+        chip.classList.add("active");
+        render();
+      });
+    });
+    document.querySelectorAll("#star-filters .filter-chip").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        activeStars = Number(chip.dataset.stars);
+        document.querySelectorAll("#star-filters .filter-chip").forEach((c) => c.classList.remove("active"));
+        chip.classList.add("active");
+        render();
+      });
+    });
+  }
+
+  function render() {
+    const filtered = allProducts.filter((p) => {
+      const themeOk = activeTheme === "Tous" || p.theme === activeTheme;
+      const starsOk = activeStars === 0 || p.stars === activeStars;
+      return themeOk && starsOk;
+    });
+    const grid = document.getElementById("grid");
+    grid.innerHTML = filtered.length
+      ? filtered.map(productCard).join("")
+      : `<div class="empty-state">Aucun kit ne correspond à ces filtres.</div>`;
+  }
+
+  function productCard(p) {
+    return `
+      <a class="product-card" href="produit.html?id=${p.id}">
+        <div class="thumb"><img src="${p.image}" alt="${p.name}" loading="lazy" /></div>
+        <div class="info">
+          <span class="theme-tag">${p.theme}${p.artist ? " · collab" : ""}</span>
+          <h3>${p.name}</h3>
+          <span class="stars">${starString(p.stars)}</span>
+          <div class="price-row">
+            <span class="price">${formatPrice(p.price)}</span>
+          </div>
+        </div>
+      </a>
+    `;
+  }
+</script>
+</body>
+</html>
