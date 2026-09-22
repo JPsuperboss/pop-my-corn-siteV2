@@ -10,7 +10,7 @@
     "tileSizeCm": 1.2,
     "image": "images/products/design-01.png",
     "artist": null,
-    "description": "Un classique tout doux pour se lancer dans la mosaïque pixel art. Kit mini, idéal pour un premier essai ou une idée cadeau rapide."
+    "description": "Un classique tout doux pour se lancer dans la mosaïque pixel art. Box mini, idéale pour un premier essai ou une idée cadeau rapide."
   },
   {
     "id": "champignon",
@@ -101,7 +101,7 @@
     "tileSizeCm": 1.2,
     "image": "images/products/design-08.png",
     "artist": null,
-    "description": "Notre kit le plus ambitieux : maison, montagnes, soleil et champs. Pour les expert·es de la mosaïque."
+    "description": "Notre box la plus ambitieuse : maison, montagnes, soleil et champs. Pour les expert·es de la mosaïque."
   },
   {
     "id": "hermine",
@@ -153,7 +153,7 @@
     "tileSizeCm": 1.2,
     "image": "images/products/design-12.png",
     "artist": null,
-    "description": "La traditionnelle bolée de cidre breton, sans anse, remplie à ras bord. Un kit rapide à assembler."
+    "description": "La traditionnelle bolée de cidre breton, sans anse, remplie à ras bord. Une box rapide à assembler."
   },
   {
     "id": "bretzel",
@@ -192,7 +192,7 @@
     "tileSizeCm": 1.2,
     "image": "images/products/design-15.png",
     "artist": null,
-    "description": "La brioche à la crème de Saint-Tropez, sucre perlé sur le dessus — un kit facile et gourmand."
+    "description": "La brioche à la crème de Saint-Tropez, sucre perlé sur le dessus — une box facile et gourmande."
   },
   {
     "id": "piment-espelette",

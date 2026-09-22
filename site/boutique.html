@@ -22,7 +22,7 @@
 
 <section class="steps">
   <div class="container">
-    <h1 class="section-title">Tous nos kits</h1>
+    <h1 class="section-title">Toutes nos box</h1>
     <div class="filters" id="theme-filters"></div>
     <div class="filters" id="star-filters"></div>
     <div class="product-grid" id="grid"></div>
@@ -31,7 +31,7 @@
 
 <footer class="site-footer">
   <div class="container">
-    <div>Pop My Corn — kits DIY de mosaïque pixel art</div>
+    <div>Pop My Corn — box DIY de mosaïque pixel art</div>
     <div>contact@popmycorn.fr</div>
   </div>
 </footer>
@@ -85,7 +85,7 @@
     const grid = document.getElementById("grid");
     grid.innerHTML = filtered.length
       ? filtered.map(productCard).join("")
-      : `<div class="empty-state">Aucun kit ne correspond à ces filtres.</div>`;
+      : `<div class="empty-state">Aucune box ne correspond à ces filtres.</div>`;
   }
 
   function productCard(p) {
