@@ -61,7 +61,12 @@ function updateCartBadge() {
 
 async function loadProducts() {
   const res = await fetch("products.json");
-  return res.json();
+  const data = await res.json();
+  // products.json peut être un tableau brut [...] ou un objet {"products": [...]}
+  // selon la dernière source qui l'a écrit (édition GitHub directe vs panneau
+  // d'administration) : on accepte les deux formats pour que la boutique ne
+  // se retrouve jamais vide à cause de ça.
+  return Array.isArray(data) ? data : (data.products || []);
 }
 
 function formatPrice(cents) {
