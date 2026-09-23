@@ -1,0 +1,38 @@
+backend:
+  name: turbo-github
+  turbo_site_id: REMPLACE_PAR_TON_SITE_ID
+  branch: main
+
+media_folder: "images/products"
+public_folder: "images/products"
+
+locale: "fr"
+
+collections:
+  - name: "products"
+    label: "Box (produits)"
+    label_singular: "Box"
+    file: "products.json"
+    format: "json"
+    fields:
+      - label: "Box"
+        name: "products"
+        widget: "list"
+        label_singular: "Box"
+        summary: "{{name}} — {{category}} · {{theme}}"
+        fields:
+          - { label: "Identifiant (technique, ne pas modifier après création)", name: "id", widget: "string" }
+          - { label: "Nom", name: "name", widget: "string" }
+          - { label: "Thème", name: "theme", widget: "string" }
+          - label: "Catégorie"
+            name: "category"
+            widget: "select"
+            options: ["Régions", "Maison", "Extérieur", "Collabs", "Métiers", "Sports", "Animaux", "Autres"]
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Prix en centimes (1990 = 19,90 €)", name: "price", widget: "number", value_type: "int" }
+          - { label: "Largeur de la grille (nombre de tuiles)", name: "gridW", widget: "number", value_type: "int" }
+          - { label: "Hauteur de la grille (nombre de tuiles)", name: "gridH", widget: "number", value_type: "int" }
+          - { label: "Taille d'une tuile (cm)", name: "tileSizeCm", widget: "number", value_type: "float" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Artiste (collab — laisser vide sinon)", name: "artist", widget: "string", required: false }
+          - { label: "Niveau interne (non affiché sur le site, usage futur)", name: "stars", widget: "number", value_type: "int", min: 1, max: 5, default: 1 }
