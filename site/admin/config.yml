@@ -3,7 +3,7 @@ backend:
   turbo_site_id: 37f901e6-fccf-43a7-94e8-70996056c275
   branch: main
 
-media_folder: "images/products"
+media_folder: "site/images/products"
 public_folder: "images/products"
 
 locale: "fr"
@@ -14,7 +14,7 @@ collections:
     files:
       - name: "products"
         label: "Box"
-        file: "products.json"
+        file: "site/products.json"
         format: "json"
         fields:
           - label: "Box"
