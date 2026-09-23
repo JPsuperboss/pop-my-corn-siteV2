@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /panier.html
+Disallow: /succes.html
+Disallow: /annulation.html
+
+Sitemap: https://popmycorn.netlify.app/sitemap.xml

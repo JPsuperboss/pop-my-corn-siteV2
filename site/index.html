@@ -44,7 +44,7 @@
       <div class="step">
         <div class="step-num">1</div>
         <h3>Choisissez une box</h3>
-        <p>Un motif, un niveau de difficulté (⭐ à ⭐⭐⭐⭐⭐), une taille — à vous de composer.</p>
+        <p>Un motif, une taille — à vous de composer, sans compétence requise.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
@@ -113,9 +113,8 @@
       <a class="product-card" href="produit.html?id=${p.id}">
         <div class="thumb"><img src="${p.image}" alt="${p.name}" loading="lazy" /></div>
         <div class="info">
-          <span class="theme-tag">${p.theme}${p.artist ? " · collab" : ""}</span>
+          <span class="theme-tag">${p.category} · ${p.theme}${p.artist ? " · collab" : ""}</span>
           <h3>${p.name}</h3>
-          <span class="stars">${starString(p.stars)}</span>
           <div class="price-row">
             <span class="price">${formatPrice(p.price)}</span>
           </div>

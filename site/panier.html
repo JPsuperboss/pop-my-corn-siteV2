@@ -27,7 +27,7 @@
 
 <footer class="site-footer">
   <div class="container">
-    <div>Pop My Corn — kits DIY de mosaïque pixel art</div>
+    <div>Pop My Corn — box DIY de mosaïque pixel art</div>
     <div>contact@popmycorn.fr</div>
   </div>
 </footer>
@@ -48,7 +48,7 @@
       container.innerHTML = `
         <div class="empty-state">
           <p>Votre panier est vide.</p>
-          <a href="boutique.html" class="btn btn-primary">Voir les kits</a>
+          <a href="boutique.html" class="btn btn-primary">Voir les box</a>
         </div>`;
       return;
     }
@@ -61,7 +61,7 @@
           <img src="${p.image}" alt="${p.name}" />
           <div>
             <strong>${p.name}</strong><br/>
-            <span class="theme-tag">${p.theme} · ${starString(p.stars)}</span><br/>
+            <span class="theme-tag">${p.category} · ${p.theme}</span><br/>
             <span>${formatPrice(p.price)}</span>
           </div>
           <div class="qty-control">

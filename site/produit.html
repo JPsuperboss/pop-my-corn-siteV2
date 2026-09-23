@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kit mosaïque — Pop My Corn</title>
+<title>Box mosaïque — Pop My Corn</title>
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -26,7 +26,7 @@
 
 <footer class="site-footer">
   <div class="container">
-    <div>Pop My Corn — kits DIY de mosaïque pixel art</div>
+    <div>Pop My Corn — box DIY de mosaïque pixel art</div>
     <div>contact@popmycorn.fr</div>
   </div>
 </footer>
@@ -50,13 +50,8 @@
     document.getElementById("detail").innerHTML = `
       <div class="thumb-large"><img src="${p.image}" alt="${p.name}" /></div>
       <div>
-        <div class="theme-tag">${p.theme}</div>
+        <div class="theme-tag">${p.category} · ${p.theme}</div>
         <h1>${p.name}</h1>
-        <div class="detail-meta">
-          <span class="stars">${starString(p.stars)}</span>
-          <span>·</span>
-          <span>Niveau ${p.stars}/5</span>
-        </div>
         <p>${p.description}</p>
         ${p.artist ? `<p class="notice">🎨 Motif créé en collaboration avec <strong>${p.artist}</strong>.</p>` : ""}
         <div class="detail-price">${formatPrice(p.price)}</div>
@@ -64,7 +59,7 @@
           <li><span>Taille finale</span><span>${finalWCm} × ${finalHCm} cm</span></li>
           <li><span>Nombre de tuiles (max.)</span><span>${tileCount}</span></li>
           <li><span>Taille d'une tuile</span><span>${p.tileSizeCm} cm</span></li>
-          <li><span>Contenu du kit</span><span>Tuiles de verre, plan numéroté, colle, cadre</span></li>
+          <li><span>Contenu de la box</span><span>Tuiles de verre, plan numéroté, colle, cadre</span></li>
         </ul>
         <div class="qty-row">
           <div class="qty-control">

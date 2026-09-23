@@ -23,8 +23,11 @@
 <section class="steps">
   <div class="container">
     <h1 class="section-title">Toutes nos box</h1>
+    <div class="search-box">
+      <input type="search" id="search-input" placeholder="Rechercher un motif… (ex : ballon, chat, Bretagne)" />
+    </div>
+    <div class="filters" id="category-filters"></div>
     <div class="filters" id="theme-filters"></div>
-    <div class="filters" id="star-filters"></div>
     <div class="product-grid" id="grid"></div>
   </div>
 </section>
@@ -38,54 +41,105 @@
 
 <script src="cart.js"></script>
 <script>
+  // Ordre de classement fixé par la marque : régions, maison, extérieur,
+  // collabs, métiers, sports, animaux. "Autres" (contenu de démo pas
+  // encore remplacé par les vrais motifs) est toujours relégué en dernier.
+  const CATEGORY_ORDER = ["Régions", "Maison", "Extérieur", "Collabs", "Métiers", "Sports", "Animaux", "Autres"];
+
+  function normalize(str) {
+    return (str || "")
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "")
+      .toLowerCase();
+  }
+
   let allProducts = [];
+  let activeCategory = "Tous";
   let activeTheme = "Tous";
-  let activeStars = 0;
+  let searchQuery = "";
 
   loadProducts().then((products) => {
     allProducts = products;
-    const themes = ["Tous", ...new Set(products.map((p) => p.theme))];
-    document.getElementById("theme-filters").innerHTML = themes
-      .map((t) => `<span class="filter-chip ${t === activeTheme ? "active" : ""}" data-theme="${t}">${t}</span>`)
+    const presentCategories = new Set(products.map((p) => p.category));
+    const categories = ["Tous", ...CATEGORY_ORDER.filter((c) => presentCategories.has(c))];
+    document.getElementById("category-filters").innerHTML = categories
+      .map((c) => `<span class="filter-chip ${c === activeCategory ? "active" : ""}" data-category="${c}">${c}</span>`)
       .join("");
-    document.getElementById("star-filters").innerHTML =
-      `<span class="filter-chip active" data-stars="0">Tous niveaux</span>` +
-      [1, 2, 3, 4, 5]
-        .map((s) => `<span class="filter-chip" data-stars="${s}">${"★".repeat(s)}</span>`)
-        .join("");
+    renderThemeFilters();
     attachFilterHandlers();
+
+    // recherche directe via l'URL (?q=ballon), utile pour un futur lien
+    // de recherche depuis le header ou une pub
+    const initialQuery = new URLSearchParams(location.search).get("q") || "";
+    if (initialQuery) {
+      document.getElementById("search-input").value = initialQuery;
+      searchQuery = normalize(initialQuery);
+    }
+
     render();
   });
 
+  function renderThemeFilters() {
+    const inCategory = activeCategory === "Tous"
+      ? allProducts
+      : allProducts.filter((p) => p.category === activeCategory);
+    const themes = ["Tous", ...new Set(inCategory.map((p) => p.theme))];
+    document.getElementById("theme-filters").innerHTML = themes
+      .map((t) => `<span class="filter-chip ${t === activeTheme ? "active" : ""}" data-theme="${t}">${t}</span>`)
+      .join("");
+  }
+
   function attachFilterHandlers() {
-    document.querySelectorAll("#theme-filters .filter-chip").forEach((chip) => {
-      chip.addEventListener("click", () => {
-        activeTheme = chip.dataset.theme;
-        document.querySelectorAll("#theme-filters .filter-chip").forEach((c) => c.classList.remove("active"));
-        chip.classList.add("active");
-        render();
-      });
+    document.getElementById("search-input").addEventListener("input", (e) => {
+      searchQuery = normalize(e.target.value);
+      // une recherche part du catalogue entier : on efface les filtres
+      // de catégorie/thème pour éviter un "aucun résultat" trompeur
+      activeCategory = "Tous";
+      activeTheme = "Tous";
+      document.querySelectorAll("#category-filters .filter-chip").forEach((c) =>
+        c.classList.toggle("active", c.dataset.category === "Tous")
+      );
+      renderThemeFilters();
+      render();
     });
-    document.querySelectorAll("#star-filters .filter-chip").forEach((chip) => {
-      chip.addEventListener("click", () => {
-        activeStars = Number(chip.dataset.stars);
-        document.querySelectorAll("#star-filters .filter-chip").forEach((c) => c.classList.remove("active"));
-        chip.classList.add("active");
-        render();
-      });
+    document.getElementById("category-filters").addEventListener("click", (e) => {
+      const chip = e.target.closest(".filter-chip");
+      if (!chip) return;
+      activeCategory = chip.dataset.category;
+      activeTheme = "Tous";
+      document.querySelectorAll("#category-filters .filter-chip").forEach((c) => c.classList.remove("active"));
+      chip.classList.add("active");
+      renderThemeFilters();
+      render();
+    });
+    document.getElementById("theme-filters").addEventListener("click", (e) => {
+      const chip = e.target.closest(".filter-chip");
+      if (!chip) return;
+      activeTheme = chip.dataset.theme;
+      document.querySelectorAll("#theme-filters .filter-chip").forEach((c) => c.classList.remove("active"));
+      chip.classList.add("active");
+      render();
     });
   }
 
   function render() {
     const filtered = allProducts.filter((p) => {
+      const categoryOk = activeCategory === "Tous" || p.category === activeCategory;
       const themeOk = activeTheme === "Tous" || p.theme === activeTheme;
-      const starsOk = activeStars === 0 || p.stars === activeStars;
-      return themeOk && starsOk;
+      const searchOk =
+        !searchQuery ||
+        [p.name, p.theme, p.category, p.description]
+          .map(normalize)
+          .some((field) => field.includes(searchQuery));
+      return categoryOk && themeOk && searchOk;
     });
     const grid = document.getElementById("grid");
+    const emptyMessage = searchQuery
+      ? `Aucune box ne correspond à « ${document.getElementById("search-input").value} ».`
+      : `Aucune box ne correspond à ces filtres.`;
     grid.innerHTML = filtered.length
       ? filtered.map(productCard).join("")
-      : `<div class="empty-state">Aucune box ne correspond à ces filtres.</div>`;
+      : `<div class="empty-state">${emptyMessage}</div>`;
   }
 
   function productCard(p) {
@@ -93,9 +147,8 @@
       <a class="product-card" href="produit.html?id=${p.id}">
         <div class="thumb"><img src="${p.image}" alt="${p.name}" loading="lazy" /></div>
         <div class="info">
-          <span class="theme-tag">${p.theme}${p.artist ? " · collab" : ""}</span>
+          <span class="theme-tag">${p.category} · ${p.theme}${p.artist ? " · collab" : ""}</span>
           <h3>${p.name}</h3>
-          <span class="stars">${starString(p.stars)}</span>
           <div class="price-row">
             <span class="price">${formatPrice(p.price)}</span>
           </div>
