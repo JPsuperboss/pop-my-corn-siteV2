@@ -19,7 +19,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: var(--creme);
+  background: var(--jaune); 
   color: var(--encre);
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   scroll-behavior: smooth;
@@ -61,7 +61,7 @@ img { max-width: 100%; display: block; }
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: var(--rouge);
+  background: var(--jaune);
   margin-right: 6px;
   vertical-align: middle;
   border-radius: 3px;
@@ -80,7 +80,7 @@ img { max-width: 100%; display: block; }
 }
 
 .nav a:hover, .nav a.active {
-  border-bottom-color: var(--rouge);
+  border-bottom-color: var(--jaune);
 }
 
 .cart-link {
@@ -96,8 +96,8 @@ img { max-width: 100%; display: block; }
 }
 
 .cart-count {
-  background: var(--rouge);
-  color: white;
+  background: var(--jaune);
+  color: encre;
   border-radius: 999px;
   padding: 1px 8px;
   font-size: 0.8rem;
