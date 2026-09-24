@@ -19,7 +19,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: var(--creme); 
+  background: var(--creme);
   color: var(--encre);
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   scroll-behavior: smooth;
@@ -53,18 +53,18 @@ img { max-width: 100%; display: block; }
 
 .logo {
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   letter-spacing: -0.5px;
 }
 
 .logo .pixel {
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 22px;
+  height: 22px;
   background: var(--jaune);
-  margin-right: 6px;
+  margin-right: 8px;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .nav {
@@ -117,13 +117,11 @@ img { max-width: 100%; display: block; }
 
 .btn:hover { transform: translateY(-2px); }
 
-..btn-primary {
+.btn-primary {
   background: var(--jaune);
   color: var(--encre);
   box-shadow: var(--shadow);
 }
-
-
 
 .btn-secondary {
   background: var(--creme);
@@ -168,6 +166,7 @@ img { max-width: 100%; display: block; }
 .hero-badge {
   display: inline-block;
   background: var(--jaune);
+  color: var(--encre);
   border: 2px solid var(--encre);
   border-radius: 999px;
   padding: 4px 14px;
@@ -285,6 +284,7 @@ img { max-width: 100%; display: block; }
 
 .product-card {
   background: white;
+  color: var(--encre);
   border: 3px solid var(--encre);
   border-radius: var(--radius);
   overflow: hidden;
@@ -514,6 +514,49 @@ img { max-width: 100%; display: block; }
 .result-page h1 { font-size: 2rem; }
 .result-page p { color: var(--gris); max-width: 50ch; margin: 12px auto 32px; }
 
+/* ---------- Accueil : thème mosaïque bleue ---------- */
+body.home {
+  min-height: 100vh;
+  background: #0a165a url("mosaique-bleue.png") repeat;
+  background-size: 480px 480px;
+}
+
+.home .site-header {
+  background: #0a2a9a;
+  border-bottom-color: #0a165a;
+  color: #fff;
+}
+.home .cart-link { background: var(--jaune); color: var(--encre); }
+.home .cart-count { background: var(--encre); color: var(--jaune); }
+
+.home .hero {
+  background: transparent;
+  border-bottom: none;
+  color: #fff;
+}
+.home .hero h1,
+.home .hero p.lead {
+  color: #fff;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+.home .steps h2,
+.home .section-title {
+  color: #fff;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+.home .step {
+  background: var(--creme);
+  border: 3px solid var(--encre);
+  border-radius: var(--radius);
+}
+
+.home .site-footer {
+  background: #0a2a9a;
+  border-top-color: #0a165a;
+  color: rgba(255, 255, 255, 0.85);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .hero .container { grid-template-columns: 1fr; }
@@ -528,17 +571,6 @@ img { max-width: 100%; display: block; }
   .hero h1 { font-size: 2rem; }
   .cart-item { grid-template-columns: 60px 1fr; grid-template-areas: "img info" "img actions"; }
   .cart-item img { width: 60px; height: 60px; }
-}
-/* Fond mosaïque */
-body {
-  background: #0a165a url("mosaique-bleue.png") repeat;
-  background-size: 480px 480px;
-}
-
-/* Logo plus gros */
-.site-header .logo {
-  font-size: 1.8em;
-}
-.site-header .logo .pixel {
-  transform: scale(1.6);
+  .logo { font-size: 1.6rem; }
+  .logo .pixel { width: 16px; height: 16px; }
 }
