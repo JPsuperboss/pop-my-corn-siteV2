@@ -529,3 +529,16 @@ img { max-width: 100%; display: block; }
   .cart-item { grid-template-columns: 60px 1fr; grid-template-areas: "img info" "img actions"; }
   .cart-item img { width: 60px; height: 60px; }
 }
+/* Fond mosaïque */
+body {
+  background: #0a165a url("mosaique-bleue.png") repeat;
+  background-size: 480px 480px;
+}
+
+/* Logo plus gros */
+.site-header .logo {
+  font-size: 1.8em;
+}
+.site-header .logo .pixel {
+  transform: scale(1.6);
+}
