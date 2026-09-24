@@ -19,7 +19,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: var(--jaune); 
+  background: var(--creme); 
   color: var(--encre);
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   scroll-behavior: smooth;
@@ -97,7 +97,7 @@ img { max-width: 100%; display: block; }
 
 .cart-count {
   background: var(--jaune);
-  color: encre;
+  color: var(--encre);
   border-radius: 999px;
   padding: 1px 8px;
   font-size: 0.8rem;
@@ -117,11 +117,13 @@ img { max-width: 100%; display: block; }
 
 .btn:hover { transform: translateY(-2px); }
 
-.btn-primary {
-  background: var(--rouge);
-  color: white;
+..btn-primary {
+  background: var(--jaune);
+  color: var(--encre);
   box-shadow: var(--shadow);
 }
+
+
 
 .btn-secondary {
   background: var(--creme);
