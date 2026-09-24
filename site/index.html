@@ -16,8 +16,6 @@
       <a href="index.html" class="active">Accueil</a>
       <a href="boutique.html">Boutique</a>
       <a href="index.html#comment-ca-marche">Comment ça marche</a>
-      <p class="lead">Ta touche perso, sans les travaux.</p>
-
     </nav>
     <a href="panier.html" class="cart-link">🛒 Panier <span class="cart-count">0</span></a>
   </div>
@@ -28,7 +26,7 @@
     <div>
       <span class="hero-badge">Nouveau · fabriqué en France</span>
       <h1>Moins de scroll, plus de colle.</h1>
-      <p class="lead">Ton dimanche pluvieux vient de trouver son scénario. Des box DIY en tuiles de verre, prêtes à coller pour créer ta propre œuvre murale. Patience, ca colle.</p>
+      <p class="lead">Ton dimanche pluvieux vient de trouver son scénario. Des box DIY en tuiles de verre, prêtes à coller pour créer ta propre œuvre murale. Patience, ça colle.</p>
       <a href="boutique.html" class="btn btn-primary">Découvrir les box</a>
     </div>
     <div class="hero-visual">
@@ -58,80 +56,4 @@
         <h3>Accrochez votre œuvre</h3>
         <p>Le cadre est inclus : il ne reste plus qu'à choisir le bon mur.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="steps">
-  <div class="container">
-    <h2 class="section-title">Notre différence</h2>
-    <div class="steps-grid">
-      <div class="step">
-        <h3>Un catalogue qui bouge</h3>
-        <p>De nouveaux motifs régulièrement, plutôt qu'un catalogue figé — un nouveau plan de pose coûte peu à ajouter.</p>
-      </div>
-      <div class="step">
-        <h3>Des déclinaisons régionales</h3>
-        <p>Une première collection Bretagne (mouette, hermine, phare, crêpe), pensée pour être déclinée à d'autres régions.</p>
-      </div>
-      <div class="step">
-        <h3>Des collabs à venir</h3>
-        <p>Des motifs signés par des artistes indépendants, identifiés comme tels sur chaque fiche produit.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="steps">
-  <div class="container">
-    <h2 class="section-title">Nos best-sellers</h2>
-    <div class="product-grid" id="featured-grid"></div>
-    <div style="text-align:center; margin-top: 8px;">
-      <a href="boutique.html" class="btn btn-secondary">Voir toutes les box</a>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container">
-    <div>Pop My Corn — box DIY de mosaïque pixel art</div>
-    <div>contact@popmycorn.fr</div>
-  </div>
-</footer>
-
-<script src="cart.js"></script>
-<script>
-  loadProducts().then((products) => {
-    const featuredIds = ["chat", "phare", "vague", "hermine"];
-    const featured = featuredIds
-      .map((id) => products.find((p) => p.id === id))
-      .filter(Boolean);
-    const grid = document.getElementById("featured-grid");
-    grid.innerHTML = featured.map(productCard).join("");
-  });
-
-  function productCard(p) {
-    return `
-      <a class="product-card" href="produit.html?id=${p.id}">
-        <div class="thumb"><img src="${p.image}" alt="${p.name}" loading="lazy" /></div>
-        <div class="info">
-          <span class="theme-tag">${p.category} · ${p.theme}${p.artist ? " · collab" : ""}</span>
-          <h3>${p.name}</h3>
-          <div class="price-row">
-            <span class="price">${formatPrice(p.price)}</span>
-          </div>
-        </div>
-      </a>
-    `;
-  }
-</script>
-body {
-  background: #0a165a url("mosaique-bleue.png") repeat;
-  background-size: 480px 480px;
-}
-.header .logo img {
-  height: 70px;
-  width: auto;
-}
-
-</html>
+    
