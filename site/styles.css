@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap');
 :root {
   --rouge: #db3a34;
   --orange: #ed8b2f;
@@ -438,4 +439,11 @@ h1.section-title::after {
 .site-footer .container > div:first-child::before {
   content: "Pop My Corn — box DIY de mosaïque pixel art";
   font-size: 0.9rem;
+}
+.hero h1,
+.product-detail h1,
+.steps h2,
+.section-title {
+  font-family: "Fredoka", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
 }
