@@ -379,3 +379,49 @@ img { max-width: 100%; display: block; }
 .detail-price { font-size: 1.6rem; font-weight: 800; margin: 16px 0; }
 
 .sp
+:root {
+  --bleu-fond: #13209c;
+  --bleu-fonce: #0b1a7a;
+}
+html, body {
+  background-color: var(--bleu-fond);
+  background-image: url("mosaique.png");
+  background-repeat: repeat;
+  background-size: 340px 340px;
+  color: var(--creme);
+}
+.site-header {
+  background: var(--bleu-fonce);
+}
+.cart-link {
+  background: var(--jaune);
+  color: var(--encre);
+}
+.cart-count {
+  background: var(--encre);
+  color: var(--creme);
+}
+.hero {
+  background: none;
+}
+.hero p.lead {
+  color: var(--creme-fonce);
+}
+.step p {
+  color: var(--creme-fonce);
+}
+.filter-chip {
+  color: var(--encre);
+}
+.site-footer {
+  border-top: 3px solid var(--encre);
+  padding: 24px 0;
+  color: var(--creme-fonce);
+  font-size: 0.9rem;
+}
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
