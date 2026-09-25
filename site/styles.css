@@ -319,3 +319,123 @@ img { max-width: 100%; display: block; }
 }
 
 .product-card h3 { margin: 0; font-size: 1.1
+.spec-list {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  background: var(--creme);
+  border: 3px solid var(--encre);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.spec-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 18px;
+  color: var(--encre);
+  font-size: 0.95rem;
+}
+
+.spec-list li:not(:last-child) {
+  border-bottom: 2px solid var(--creme-fonce);
+}
+
+.spec-list li span:first-child {
+  color: var(--gris);
+  font-weight: 600;
+}
+
+.spec-list li span:last-child {
+  font-weight: 700;
+}
+
+.notice {
+  background: #FFF1BF;
+  color: #5a3e00;
+  border: 2px solid var(--encre);
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  margin: 16px 0;
+}
+
+.qty-row {
+  margin: 20px 0;
+}
+
+.qty-control {
+  display: inline-flex;
+  align-items: stretch;
+  border: 3px solid var(--encre);
+  border-radius: 999px;
+  background: var(--creme);
+  overflow: hidden;
+}
+
+.qty-control button {
+  border: none;
+  background: var(--jaune);
+  color: var(--encre);
+  font-size: 1.2rem;
+  font-weight: 800;
+  width: 44px;
+  cursor: pointer;
+}
+
+#qty-input {
+  width: 48px;
+  border: none;
+  background: transparent;
+  color: var(--encre);
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--creme-fonce);
+  font-size: 1.05rem;
+}
+
+.logo:has(.pixel) {
+  font-size: 0;
+  color: transparent;
+}
+
+.logo:has(.pixel) .pixel {
+  display: none;
+}
+
+.logo:has(.pixel)::before {
+  content: "";
+  display: block;
+  width: 168px;
+  height: 82px;
+  background-image: url("logo-pop-my-corn.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+h1.section-title::after {
+  content: "Level up tes corners";
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--creme-fonce);
+  margin-top: 10px;
+}
+
+.site-footer .container > div:first-child {
+  font-size: 0;
+}
+
+.site-footer .container > div:first-child::before {
+  content: "Pop My Corn — box DIY de mosaïque pixel art";
+  font-size: 0.9rem;
+}
