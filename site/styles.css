@@ -23,9 +23,9 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: var(--bleu-fond);
-  background-image: url("mosaique.png");
+  background-image: url("mosaique.jpg");
   background-repeat: repeat;
-  background-size: 640px 640px;
+  background-size: 512px 512px;
   color: var(--creme);
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   scroll-behavior: smooth;
