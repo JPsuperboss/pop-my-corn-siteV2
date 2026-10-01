@@ -87,7 +87,8 @@ img { max-width: 100%; display: block; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--jaune);
+  background: var(--jaune) url("mosaique-jaune.png");
+  background-repeat: repeat;
   color: var(--encre);
   padding: 8px 16px;
   border-radius: 999px;
@@ -116,7 +117,8 @@ img { max-width: 100%; display: block; }
 .btn:hover { transform: translateY(-2px); }
 
 .btn-primary {
-  background: var(--jaune);
+  background: var(--jaune) url("mosaique-jaune.png");
+  background-repeat: repeat;
   color: var(--encre);
   box-shadow: var(--shadow);
 }
@@ -162,7 +164,8 @@ img { max-width: 100%; display: block; }
 
 .hero-badge {
   display: inline-block;
-  background: var(--jaune);
+  background: var(--jaune) url("mosaique-jaune.png");
+  background-repeat: repeat;
   color: var(--encre);
   border: 2px solid var(--encre);
   border-radius: 999px;
