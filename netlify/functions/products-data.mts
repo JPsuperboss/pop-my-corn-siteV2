@@ -31,4 +31,4 @@ export const products = [
     "id": "cactus",
     "name": "Cactus",
     "theme": "Nature",
-    "category": "Extér
+    "category": "Extérieur",
