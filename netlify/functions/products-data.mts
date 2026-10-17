@@ -3,6 +3,7 @@ export const products = [
     "id": "coeur",
     "name": "Cœur",
     "theme": "Symboles",
+    "category": "Maison",
     "stars": 1,
     "price": 1990,
     "gridW": 14,
@@ -10,12 +11,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-01.png",
     "artist": null,
-    "description": "Un classique tout doux pour se lancer dans la mosaïque pixel art. Kit mini, idéal pour un premier essai ou une idée cadeau rapide."
+    "description": "Un classique tout doux pour se lancer dans la mosaïque pixel art. Box mini, idéale pour un premier essai ou une idée cadeau rapide."
   },
   {
     "id": "champignon",
     "name": "Champignon",
     "theme": "Nature",
+    "category": "Exterieur",
     "stars": 1,
     "price": 1990,
     "gridW": 14,
@@ -23,12 +25,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-02.png",
     "artist": null,
-    "description": "Un petit champignon rouge et blanc, parfait pour découvrir l'assemblage sans se prendre la tête."
+    "description": "Un petit champignon rouge et blanc, parfait pour decouvrir l'assemblage sans se prendre la tete."
   },
   {
     "id": "cactus",
     "name": "Cactus",
     "theme": "Nature",
+    "category": "Exterieur",
     "stars": 2,
     "price": 2490,
     "gridW": 18,
@@ -36,12 +39,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-03.png",
     "artist": null,
-    "description": "Un cactus graphique pour une déco murale qui ne demande aucun arrosage."
+    "description": "Un cactus graphique pour une deco murale qui ne demande aucun arrosage."
   },
   {
     "id": "etoile",
-    "name": "Étoile",
+    "name": "Etoile",
     "theme": "Symboles",
+    "category": "Maison",
     "stars": 2,
     "price": 2490,
     "gridW": 18,
@@ -49,12 +53,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-04.png",
     "artist": null,
-    "description": "Une étoile pop en dégradé jaune/orange, à assembler en une soirée."
+    "description": "Une etoile pop en degrade jaune/orange, a assembler en une soiree."
   },
   {
     "id": "vague",
     "name": "Vague",
     "theme": "Paysages",
+    "category": "Exterieur",
     "stars": 3,
     "price": 3490,
     "gridW": 22,
@@ -62,12 +67,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-05.png",
     "artist": null,
-    "description": "Une vague bleue minimaliste, pour les amateurs de déco épurée façon bord de mer."
+    "description": "Une vague bleue minimaliste, pour les amateurs de deco epuree facon bord de mer."
   },
   {
     "id": "montagne",
     "name": "Montagne au couchant",
     "theme": "Paysages",
+    "category": "Exterieur",
     "stars": 3,
     "price": 3490,
     "gridW": 22,
@@ -75,12 +81,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-06.png",
     "artist": null,
-    "description": "Un coucher de soleil sur la montagne, dégradé violet-orangé, pour progresser en douceur."
+    "description": "Un coucher de soleil sur la montagne, degrade violet-orange, pour progresser en douceur."
   },
   {
     "id": "chat",
     "name": "Chat roux",
     "theme": "Animaux",
+    "category": "Animaux",
     "stars": 4,
     "price": 4490,
     "gridW": 28,
@@ -88,12 +95,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-07.png",
     "artist": null,
-    "description": "Un chat roux plein de caractère, pour les mordus de patience qui veulent un vrai défi."
+    "description": "Un chat roux plein de caractere, pour les mordus de patience qui veulent un vrai defi."
   },
   {
     "id": "paysage",
     "name": "Paysage de campagne",
     "theme": "Paysages",
+    "category": "Exterieur",
     "stars": 5,
     "price": 5490,
     "gridW": 32,
@@ -101,12 +109,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-08.png",
     "artist": null,
-    "description": "Notre kit le plus ambitieux : maison, montagnes, soleil et champs. Pour les expert·es de la mosaïque."
+    "description": "Notre box la plus ambitieuse : maison, montagnes, soleil et champs. Pour les expert·es de la mosaique."
   },
   {
     "id": "hermine",
     "name": "Hermine",
     "theme": "Bretagne",
+    "category": "Regions",
     "stars": 3,
     "price": 3490,
     "gridW": 20,
@@ -114,12 +123,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-09.png",
     "artist": null,
-    "description": "Le motif héraldique breton, minimaliste en noir sur blanc. Une pièce discrète et identitaire, sans jamais utiliser le drapeau officiel."
+    "description": "Le motif heraldique breton, minimaliste en noir sur blanc. Une piece discrete et identitaire, sans jamais utiliser le drapeau officiel."
   },
   {
     "id": "galette-saucisse",
     "name": "Galette-saucisse",
     "theme": "Bretagne",
+    "category": "Regions",
     "stars": 2,
     "price": 2490,
     "gridW": 22,
@@ -131,8 +141,9 @@ export const products = [
   },
   {
     "id": "galette-complete",
-    "name": "Galette complète",
+    "name": "Galette complete",
     "theme": "Bretagne",
+    "category": "Regions",
     "stars": 3,
     "price": 3490,
     "gridW": 20,
@@ -140,12 +151,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-11.png",
     "artist": null,
-    "description": "Jambon, œuf, fromage et sarrasin : la galette complète pliée en carré, jaune d'œuf bien visible au centre."
+    "description": "Jambon, oeuf, fromage et sarrasin : la galette complete pliee en carre, jaune d'oeuf bien visible au centre."
   },
   {
     "id": "cidre",
-    "name": "Cidre en bolée",
+    "name": "Cidre en bolee",
     "theme": "Bretagne",
+    "category": "Regions",
     "stars": 1,
     "price": 1990,
     "gridW": 18,
@@ -153,12 +165,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-12.png",
     "artist": null,
-    "description": "La traditionnelle bolée de cidre breton, sans anse, remplie à ras bord. Un kit rapide à assembler."
+    "description": "La traditionnelle bolee de cidre breton, sans anse, remplie a ras bord. Une box rapide a assembler."
   },
   {
     "id": "bretzel",
     "name": "Bretzel",
     "theme": "Alsace",
+    "category": "Regions",
     "stars": 2,
     "price": 2490,
     "gridW": 12,
@@ -166,12 +179,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-13.png",
     "artist": null,
-    "description": "Le bretzel alsacien, doré et parsemé de gros sel — premier motif de notre future collection Alsace."
+    "description": "Le bretzel alsacien, dore et parseme de gros sel, premier motif de notre future collection Alsace."
   },
   {
     "id": "cigale",
     "name": "Cigale",
     "theme": "Sud",
+    "category": "Regions",
     "stars": 2,
     "price": 2490,
     "gridW": 18,
@@ -179,12 +193,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-14.png",
     "artist": null,
-    "description": "La cigale provençale, symbole du Sud, ailes déployées façon céramique de Provence."
+    "description": "La cigale provencale, symbole du Sud, ailes deployees facon ceramique de Provence."
   },
   {
     "id": "tropezienne",
-    "name": "Tropézienne",
+    "name": "Tropezienne",
     "theme": "Sud",
+    "category": "Regions",
     "stars": 1,
     "price": 1990,
     "gridW": 18,
@@ -192,12 +207,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-15.png",
     "artist": null,
-    "description": "La brioche à la crème de Saint-Tropez, sucre perlé sur le dessus — un kit facile et gourmand."
+    "description": "La brioche a la creme de Saint-Tropez, sucre perle sur le dessus, une box facile et gourmande."
   },
   {
     "id": "piment-espelette",
     "name": "Piment d'Espelette",
     "theme": "Pays basque",
+    "category": "Regions",
     "stars": 1,
     "price": 1990,
     "gridW": 18,
@@ -205,12 +221,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-16.png",
     "artist": null,
-    "description": "Le piment rouge suspendu sur les façades du Pays basque — premier motif de la future collection dédiée."
+    "description": "Le piment rouge suspendu sur les facades du Pays basque, premier motif de la future collection dediee."
   },
   {
     "id": "rentree",
-    "name": "Rentrée des classes",
-    "theme": "Actualité",
+    "name": "Rentree des classes",
+    "theme": "Actualite",
+    "category": "Maison",
     "stars": 2,
     "price": 2490,
     "gridW": 16,
@@ -218,12 +235,13 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-17.png",
     "artist": null,
-    "description": "Un crayon jaune tout simple, en édition de saison pour la rentrée — un motif générique, sans aucune licence de marque."
+    "description": "Un crayon jaune tout simple, en edition de saison pour la rentree, un motif generique, sans aucune licence de marque."
   },
   {
     "id": "supporter",
     "name": "Esprit supporter",
-    "theme": "Actualité",
+    "theme": "Actualite",
+    "category": "Sports",
     "stars": 1,
     "price": 1990,
     "gridW": 16,
@@ -231,6 +249,90 @@ export const products = [
     "tileSizeCm": 1.2,
     "image": "images/products/design-18.png",
     "artist": null,
-    "description": "Un damier bleu-blanc-rouge pour vivre les grands événements sportifs aux couleurs de la France — motif générique, sans logo ni fédération."
+    "description": "Un damier bleu-blanc-rouge pour vivre les grands evenements sportifs aux couleurs de la France, motif generique, sans logo ni federation."
+  },
+  {
+    "id": "phare",
+    "name": "Phare marin",
+    "theme": "Bretagne",
+    "category": "Regions",
+    "stars": 3,
+    "price": 3490,
+    "gridW": 20,
+    "gridH": 26,
+    "tileSizeCm": 1.2,
+    "image": "images/products/design-19.png",
+    "artist": null,
+    "description": "Un phare rouge et blanc face a la mer, rayures franches et ciel degrade, le motif signature de la cote bretonne."
+  },
+  {
+    "id": "balise",
+    "name": "Balise vert et rouge",
+    "theme": "Bretagne",
+    "category": "Regions",
+    "stars": 2,
+    "price": 2490,
+    "gridW": 16,
+    "gridH": 22,
+    "tileSizeCm": 1.2,
+    "image": "images/products/design-20.png",
+    "artist": null,
+    "description": "Le duo de balises de chenal, tribord vert et babord rouge, pour les amoureux de navigation."
+  },
+  {
+    "id": "mouette",
+    "name": "Mouette",
+    "theme": "Bretagne",
+    "category": "Exterieur",
+    "stars": 2,
+    "price": 2490,
+    "gridW": 20,
+    "gridH": 16,
+    "tileSizeCm": 1.2,
+    "image": "images/products/design-21.png",
+    "artist": null,
+    "description": "Une mouette en plein vol au-dessus des vagues, silhouette blanche et grise epuree."
+  },
+  {
+    "id": "ancre-marine",
+    "name": "Ancre marine",
+    "theme": "Bretagne",
+    "category": "Regions",
+    "stars": 2,
+    "price": 2490,
+    "gridW": 18,
+    "gridH": 20,
+    "tileSizeCm": 1.2,
+    "image": "images/products/design-22.png",
+    "artist": null,
+    "description": "L'ancre marine classique, bleu marine sur fond clair, un basique intemporel pour toute deco bord de mer."
+  },
+  {
+    "id": "bottes-jaunes",
+    "name": "Bottes jaunes",
+    "theme": "Bretagne",
+    "category": "Regions",
+    "stars": 1,
+    "price": 1990,
+    "gridW": 16,
+    "gridH": 18,
+    "tileSizeCm": 1.2,
+    "image": "images/products/design-23.png",
+    "artist": null,
+    "description": "Les bottes jaunes du marin, clin d'oeil rigolo au cire et a la vie de port. Une box rapide et pop."
+  },
+  {
+    "id": "cire-jaune",
+    "name": "Cire jaune",
+    "theme": "Bretagne",
+    "category": "Regions",
+    "stars": 2,
+    "price": 2490,
+    "gridW": 18,
+    "gridH": 22,
+    "tileSizeCm": 1.2,
+    "image": "images/products/design-24.png",
+    "artist": null,
+    "description": "Le cire jaune breton, capuche relevee, le vrai symbole du marin face au grain."
   }
 ];

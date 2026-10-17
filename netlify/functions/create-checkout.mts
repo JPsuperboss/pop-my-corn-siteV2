@@ -56,6 +56,7 @@ export default async (req: Request, context: Context) => {
   const siteUrl = Netlify.env.get("URL") || new URL(req.url).origin;
 
   const line_items = [];
+  const cartSummaryParts: string[] = [];
   for (const item of items) {
     const product = products.find((p) => p.id === item.id);
     const qty = Math.max(1, Math.min(50, Math.floor(Number(item.qty) || 1)));
@@ -71,6 +72,8 @@ export default async (req: Request, context: Context) => {
         },
       },
     });
+    // Résumé compact "id:qty" — relu par stripe-webhook.mts pour reconstruire la commande.
+    cartSummaryParts.push(`${product.id}:${qty}`);
   }
 
   if (line_items.length === 0) {
@@ -83,6 +86,9 @@ export default async (req: Request, context: Context) => {
     shipping_address_collection: { allowed_countries: ["FR", "BE", "CH", "LU"] },
     success_url: `${siteUrl}/succes.html`,
     cancel_url: `${siteUrl}/annulation.html`,
+    metadata: {
+      cart: cartSummaryParts.join(","),
+    },
   };
 
   try {

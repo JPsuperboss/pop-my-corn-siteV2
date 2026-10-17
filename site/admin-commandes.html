@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Commandes — Pop My Corn</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 2rem; background:#faf7f2; color:#2b2b2b; }
+  table { width:100%; border-collapse: collapse; margin-top:1rem; background:#fff; }
+  th, td { text-align:left; padding:0.6rem; border-bottom:1px solid #e5ddd0; font-size:0.9rem; vertical-align:top; }
+  th { background:#f0e6d8; }
+  #gate { max-width: 320px; margin: 4rem auto; text-align:center; }
+  input { padding:0.5rem; width:100%; box-sizing:border-box; margin-top:0.5rem; }
+  button { margin-top:0.75rem; padding:0.5rem 1rem; cursor:pointer; }
+  #error { color:#c0392b; font-size:0.85rem; }
+</style>
+</head>
+<body>
+  <div id="gate">
+    <h2>Commandes Pop My Corn</h2>
+    <input id="key" type="password" placeholder="Clé admin" autocomplete="off" />
+    <button id="go">Voir les commandes</button>
+    <p id="error"></p>
+  </div>
+  <div id="content" style="display:none;">
+    <h2>Commandes (<span id="count"></span>)</h2>
+    <table id="table">
+      <thead>
+        <tr><th>Date</th><th>Email</th><th>Articles</th><th>Montant</th><th>Adresse de livraison</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <script>
+    document.getElementById("go").addEventListener("click", async () => {
+      const key = document.getElementById("key").value.trim();
+      const errorEl = document.getElementById("error");
+      errorEl.textContent = "";
+      try {
+        const res = await fetch(`/.netlify/functions/list-orders?key=${encodeURIComponent(key)}`);
+        if (!res.ok) {
+          errorEl.textContent = "Clé incorrecte ou erreur serveur.";
+          return;
+        }
+        const orders = await res.json();
+        document.getElementById("gate").style.display = "none";
+        document.getElementById("content").style.display = "block";
+        document.getElementById("count").textContent = orders.length;
+        const tbody = document.querySelector("#table tbody");
+        tbody.innerHTML = orders.map((o) => `
+          <tr>
+            <td>${new Date(o.createdAt).toLocaleString("fr-FR")}</td>
+            <td>${o.customerEmail ?? ""}</td>
+            <td>${(o.lines || []).map((l) => `${l.name} x${l.qty}`).join("<br>")}</td>
+            <td>${(o.amountTotal / 100).toFixed(2)} €</td>
+            <td>${o.shippingAddress ?? ""}</td>
+          </tr>
+        `).join("");
+      } catch (e) {
+        errorEl.textContent = "Erreur réseau.";
+      }
+    });
+  </script>
+</body>
+</html>
