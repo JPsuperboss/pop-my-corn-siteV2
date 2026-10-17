@@ -348,5 +348,33 @@
     "image": "images/products/design-27.png",
     "artist": null,
     "description": "Le poisson rouge gagné à la fête foraine, figé pour toujours dans son sac en mosaïque murale."
+  },
+  {
+    "id": "hippo-1",
+    "name": "Hippo 1",
+    "theme": "Animaux",
+    "category": "Animaux",
+    "stars": 3,
+    "price": 3490,
+    "gridW": 19,
+    "gridH": 30,
+    "tileSizeCm": 1.2,
+    "image": "images/products/design-25.png",
+    "artist": null,
+    "description": "Un hippocampe en dégradé de bleus turquoise et cobalt, détouré pour s'adapter à n'importe quel fond."
+  },
+  {
+    "id": "hippo-2",
+    "name": "Hippo 2",
+    "theme": "Animaux",
+    "category": "Animaux",
+    "stars": 3,
+    "price": 3490,
+    "gridW": 19,
+    "gridH": 30,
+    "tileSizeCm": 1.2,
+    "image": "images/products/design-26.png",
+    "artist": null,
+    "description": "Le même hippocampe en dégradé de bleus, posé sur un mur clair texturé."
   }
 ]
