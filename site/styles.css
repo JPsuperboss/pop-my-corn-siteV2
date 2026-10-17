@@ -15,7 +15,6 @@
   --shadow: 0 6px 20px rgba(35, 33, 38, 0.08);
   --bleu-fond: #13209c;
   --bleu-fonce: #0b1a7a;
-  --rouge-fond: #b5281f;
 }
 
 * { box-sizing: border-box; }
@@ -23,10 +22,10 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: var(--rouge-fond);
-  background-image: url("mosaique-rouge.png");
+  background-color: var(--bleu-fond);
+  background-image: url("mosaique.png");
   background-repeat: repeat;
-  background-size: 360px 360px;
+  background-size: 340px 340px;
   color: var(--creme);
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   scroll-behavior: smooth;
@@ -88,8 +87,7 @@ img { max-width: 100%; display: block; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--jaune) url("mosaique-jaune.png");
-  background-repeat: repeat;
+  background: var(--jaune);
   color: var(--encre);
   padding: 8px 16px;
   border-radius: 999px;
@@ -118,8 +116,7 @@ img { max-width: 100%; display: block; }
 .btn:hover { transform: translateY(-2px); }
 
 .btn-primary {
-  background: var(--jaune) url("mosaique-jaune.png");
-  background-repeat: repeat;
+  background: var(--jaune);
   color: var(--encre);
   box-shadow: var(--shadow);
 }
@@ -165,8 +162,7 @@ img { max-width: 100%; display: block; }
 
 .hero-badge {
   display: inline-block;
-  background: var(--jaune) url("mosaique-jaune.png");
-  background-repeat: repeat;
+  background: var(--jaune);
   color: var(--encre);
   border: 2px solid var(--encre);
   border-radius: 999px;
