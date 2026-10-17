@@ -11,7 +11,22 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=bzh-starter-pack</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://popmycorn.netlify.app/produit.html?id=couple-traditionnel</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=danse-bzh</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=hermine</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>0.7</priority>
   </url>
@@ -41,12 +56,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=bateau-en-papier</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://popmycorn.netlify.app/produit.html?id=cloud</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://popmycorn.netlify.app/produit.html?id=fantome</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=montgolfiere-cur</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>0.7</priority>
   </url>
@@ -91,6 +116,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=couverts</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://popmycorn.netlify.app/produit.html?id=donut</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>0.7</priority>
@@ -131,6 +161,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=nageuse</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://popmycorn.netlify.app/produit.html?id=plongeuse</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>0.7</priority>
@@ -156,6 +191,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=mouette-marin</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://popmycorn.netlify.app/produit.html?id=pesked</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>0.7</priority>
@@ -176,6 +216,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=canard-cire-jaune</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://popmycorn.netlify.app/produit.html?id=chauve-souris</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>0.7</priority>
@@ -191,7 +236,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=fish</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://popmycorn.netlify.app/produit.html?id=hippocampe</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=hotdog</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>0.7</priority>
   </url>
@@ -201,7 +256,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=poisson-rouge</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://popmycorn.netlify.app/produit.html?id=poulpe</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=poussinous</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=raie</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>0.7</priority>
   </url>
@@ -242,6 +312,16 @@
   </url>
   <url>
     <loc>https://popmycorn.netlify.app/produit.html?id=chat-qui-bondit</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=chat-qui-grimpe</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=griffes</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>0.7</priority>
   </url>
@@ -291,7 +371,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://popmycorn.netlify.app/produit.html?id=main</loc>
+    <loc>https://popmycorn.netlify.app/produit.html?id=cocktail-olives</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>0.7</priority>
   </url>
@@ -302,6 +382,11 @@
   </url>
   <url>
     <loc>https://popmycorn.netlify.app/produit.html?id=pinard</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://popmycorn.netlify.app/produit.html?id=main</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>0.7</priority>
   </url>

@@ -1,5 +1,19 @@
 [
   {
+    "id": "bzh-starter-pack",
+    "name": "BZH starter pack",
+    "theme": "Bretagne",
+    "category": "Régions",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 65,
+    "gridH": 20,
+    "tileSizeCm": 1.2,
+    "image": "images/products/bzh-starter-pack.png",
+    "artist": null,
+    "description": "BZH starter pack en mosaïque pixel art : 744 carreaux de verre en 4 couleurs, pour un motif d'environ 78 × 24 cm une fois posé."
+  },
+  {
     "id": "couple-traditionnel",
     "name": "Couple traditionnel",
     "theme": "Bretagne",
@@ -12,6 +26,34 @@
     "image": "images/products/couple-traditionnel.png",
     "artist": null,
     "description": "Couple traditionnel en mosaïque pixel art : 489 carreaux de verre en 6 couleurs, pour un motif d'environ 34 × 38 cm une fois posé."
+  },
+  {
+    "id": "danse-bzh",
+    "name": "Danse BZH",
+    "theme": "Bretagne",
+    "category": "Régions",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 48,
+    "gridH": 36,
+    "tileSizeCm": 1.2,
+    "image": "images/products/danse-bzh.png",
+    "artist": null,
+    "description": "Danse BZH en mosaïque pixel art : 373 carreaux de verre en 1 couleur, pour un motif d'environ 58 × 43 cm une fois posé."
+  },
+  {
+    "id": "hermine",
+    "name": "Hermine",
+    "theme": "Bretagne",
+    "category": "Régions",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 86,
+    "gridH": 35,
+    "tileSizeCm": 1.2,
+    "image": "images/products/hermine.png",
+    "artist": null,
+    "description": "Hermine en mosaïque pixel art : 370 carreaux de verre en 2 couleurs, pour un motif d'environ 103 × 42 cm une fois posé."
   },
   {
     "id": "sabot",
@@ -84,6 +126,20 @@
     "description": "Coeur flèche en mosaïque pixel art : 152 carreaux de verre en 3 couleurs, pour un motif d'environ 24 × 24 cm une fois posé."
   },
   {
+    "id": "bateau-en-papier",
+    "name": "Bateau en papier",
+    "theme": "Enfant",
+    "category": "Maison",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 43,
+    "gridH": 22,
+    "tileSizeCm": 1.2,
+    "image": "images/products/bateau-en-papier.png",
+    "artist": null,
+    "description": "Bateau en papier en mosaïque pixel art : 492 carreaux de verre en 2 couleurs, pour un motif d'environ 52 × 26 cm une fois posé."
+  },
+  {
     "id": "cloud",
     "name": "Cloud",
     "theme": "Enfant",
@@ -110,6 +166,20 @@
     "image": "images/products/fantome.png",
     "artist": null,
     "description": "Fantôme en mosaïque pixel art : 149 carreaux de verre en 4 couleurs, pour un motif d'environ 16 × 20 cm une fois posé."
+  },
+  {
+    "id": "montgolfiere-cur",
+    "name": "Montgolfière cœur",
+    "theme": "Enfant",
+    "category": "Maison",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 32,
+    "gridH": 44,
+    "tileSizeCm": 1.2,
+    "image": "images/products/montgolfiere-cur.png",
+    "artist": null,
+    "description": "Montgolfière cœur en mosaïque pixel art : 855 carreaux de verre en 9 couleurs, pour un motif d'environ 38 × 53 cm une fois posé."
   },
   {
     "id": "soleil-coin",
@@ -224,6 +294,20 @@
     "description": "Citron en mosaïque pixel art : 132 carreaux de verre en 2 couleurs, pour un motif d'environ 14 × 22 cm une fois posé."
   },
   {
+    "id": "couverts",
+    "name": "Couverts",
+    "theme": "Nourriture",
+    "category": "Maison",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 33,
+    "gridH": 44,
+    "tileSizeCm": 1.2,
+    "image": "images/products/couverts.png",
+    "artist": null,
+    "description": "Couverts en mosaïque pixel art : 552 carreaux de verre en 2 couleurs, pour un motif d'environ 40 × 53 cm une fois posé."
+  },
+  {
     "id": "donut",
     "name": "Donut",
     "theme": "Nourriture",
@@ -336,6 +420,20 @@
     "description": "Femme bouée en mosaïque pixel art : 666 carreaux de verre en 8 couleurs, pour un motif d'environ 35 × 46 cm une fois posé."
   },
   {
+    "id": "nageuse",
+    "name": "Nageuse",
+    "theme": "Baigneurs",
+    "category": "Extérieur",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 11,
+    "gridH": 52,
+    "tileSizeCm": 1.2,
+    "image": "images/products/nageuse.png",
+    "artist": null,
+    "description": "Nageuse en mosaïque pixel art : 391 carreaux de verre en 4 couleurs, pour un motif d'environ 13 × 62 cm une fois posé."
+  },
+  {
     "id": "plongeuse",
     "name": "Plongeuse",
     "theme": "Baigneurs",
@@ -406,6 +504,20 @@
     "description": "Coquillage en mosaïque pixel art : 1176 carreaux de verre en 2 couleurs, pour un motif d'environ 48 × 46 cm une fois posé."
   },
   {
+    "id": "mouette-marin",
+    "name": "Mouette marin",
+    "theme": "Mer",
+    "category": "Extérieur",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 27,
+    "gridH": 43,
+    "tileSizeCm": 1.2,
+    "image": "images/products/mouette-marin.png",
+    "artist": null,
+    "description": "Mouette marin en mosaïque pixel art : 423 carreaux de verre en 6 couleurs, pour un motif d'environ 32 × 52 cm une fois posé."
+  },
+  {
     "id": "pesked",
     "name": "Pesked",
     "theme": "Mer",
@@ -462,6 +574,20 @@
     "description": "Tribord Babord en mosaïque pixel art : 195 carreaux de verre en 1 couleur, pour un motif d'environ 18 × 35 cm une fois posé."
   },
   {
+    "id": "canard-cire-jaune",
+    "name": "Canard ciré jaune",
+    "theme": "Animaux",
+    "category": "Animaux",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 56,
+    "gridH": 89,
+    "tileSizeCm": 1.2,
+    "image": "images/products/canard-cire-jaune.png",
+    "artist": null,
+    "description": "Canard ciré jaune en mosaïque pixel art : 4984 carreaux de verre en 4 couleurs, pour un motif d'environ 67 × 107 cm une fois posé."
+  },
+  {
     "id": "chauve-souris",
     "name": "Chauve-souris",
     "theme": "Animaux",
@@ -504,6 +630,20 @@
     "description": "Empreinte de patte en mosaïque pixel art : 334 carreaux de verre en 1 couleur, pour un motif d'environ 31 × 29 cm une fois posé."
   },
   {
+    "id": "fish",
+    "name": "Fish",
+    "theme": "Animaux",
+    "category": "Animaux",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 9,
+    "gridH": 72,
+    "tileSizeCm": 1.2,
+    "image": "images/products/fish.png",
+    "artist": null,
+    "description": "Fish en mosaïque pixel art : 224 carreaux de verre en 6 couleurs, pour un motif d'environ 11 × 86 cm une fois posé."
+  },
+  {
     "id": "hippocampe",
     "name": "Hippocampe",
     "theme": "Animaux",
@@ -516,6 +656,20 @@
     "image": "images/products/hippocampe.png",
     "artist": null,
     "description": "Hippocampe en mosaïque pixel art : 203 carreaux de verre en 5 couleurs, pour un motif d'environ 22 × 35 cm une fois posé."
+  },
+  {
+    "id": "hotdog",
+    "name": "Hotdog",
+    "theme": "Animaux",
+    "category": "Animaux",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 23,
+    "gridH": 48,
+    "tileSizeCm": 1.2,
+    "image": "images/products/hotdog.png",
+    "artist": null,
+    "description": "Hotdog en mosaïque pixel art : 747 carreaux de verre en 6 couleurs, pour un motif d'environ 28 × 58 cm une fois posé."
   },
   {
     "id": "nounours",
@@ -532,6 +686,20 @@
     "description": "Nounours en mosaïque pixel art : 263 carreaux de verre en 4 couleurs, pour un motif d'environ 24 × 23 cm une fois posé."
   },
   {
+    "id": "poisson-rouge",
+    "name": "Poisson rouge",
+    "theme": "Animaux",
+    "category": "Animaux",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 29,
+    "gridH": 44,
+    "tileSizeCm": 1.2,
+    "image": "images/products/poisson-rouge.png",
+    "artist": null,
+    "description": "Poisson rouge en mosaïque pixel art : 766 carreaux de verre en 6 couleurs, pour un motif d'environ 35 × 53 cm une fois posé."
+  },
+  {
     "id": "poulpe",
     "name": "Poulpe",
     "theme": "Animaux",
@@ -544,6 +712,34 @@
     "image": "images/products/poulpe.png",
     "artist": null,
     "description": "Poulpe en mosaïque pixel art : 173 carreaux de verre en 4 couleurs, pour un motif d'environ 23 × 20 cm une fois posé."
+  },
+  {
+    "id": "poussinous",
+    "name": "Poussinous",
+    "theme": "Animaux",
+    "category": "Animaux",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 100,
+    "gridH": 30,
+    "tileSizeCm": 1.2,
+    "image": "images/products/poussinous.png",
+    "artist": null,
+    "description": "Poussinous en mosaïque pixel art : 845 carreaux de verre en 6 couleurs, pour un motif d'environ 120 × 36 cm une fois posé."
+  },
+  {
+    "id": "raie",
+    "name": "Raie",
+    "theme": "Animaux",
+    "category": "Animaux",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 26,
+    "gridH": 57,
+    "tileSizeCm": 1.2,
+    "image": "images/products/raie.png",
+    "artist": null,
+    "description": "Raie en mosaïque pixel art : 508 carreaux de verre en 5 couleurs, pour un motif d'environ 31 × 68 cm une fois posé."
   },
   {
     "id": "teckel",
@@ -656,6 +852,34 @@
     "image": "images/products/chat-qui-bondit.png",
     "artist": null,
     "description": "Chat qui bondit en mosaïque pixel art : 253 carreaux de verre en 2 couleurs, pour un motif d'environ 26 × 28 cm une fois posé."
+  },
+  {
+    "id": "chat-qui-grimpe",
+    "name": "Chat qui grimpe",
+    "theme": "Silhouette chat",
+    "category": "Animaux",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 24,
+    "gridH": 50,
+    "tileSizeCm": 1.2,
+    "image": "images/products/chat-qui-grimpe.png",
+    "artist": null,
+    "description": "Chat qui grimpe en mosaïque pixel art : 458 carreaux de verre en 2 couleurs, pour un motif d'environ 29 × 60 cm une fois posé."
+  },
+  {
+    "id": "griffes",
+    "name": "Griffes",
+    "theme": "Silhouette chat",
+    "category": "Animaux",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 25,
+    "gridH": 61,
+    "tileSizeCm": 1.2,
+    "image": "images/products/griffes.png",
+    "artist": null,
+    "description": "Griffes en mosaïque pixel art : 692 carreaux de verre en 3 couleurs, pour un motif d'environ 30 × 73 cm une fois posé."
   },
   {
     "id": "balle-de-baseball",
@@ -782,6 +1006,20 @@
     "image": "images/products/volant-de-badminton.png",
     "artist": null,
     "description": "Volant de badminton en mosaïque pixel art : 140 carreaux de verre en 6 couleurs, pour un motif d'environ 22 × 23 cm une fois posé."
+  },
+  {
+    "id": "cocktail-olives",
+    "name": "Cocktail olives",
+    "theme": "Divers",
+    "category": "Autres",
+    "stars": 5,
+    "price": 5490,
+    "gridW": 40,
+    "gridH": 51,
+    "tileSizeCm": 1.2,
+    "image": "images/products/cocktail-olives.png",
+    "artist": null,
+    "description": "Cocktail olives en mosaïque pixel art : 2040 carreaux de verre en 6 couleurs, pour un motif d'environ 48 × 61 cm une fois posé."
   },
   {
     "id": "moustache",
