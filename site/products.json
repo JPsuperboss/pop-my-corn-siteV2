@@ -334,5 +334,19 @@
     "image": "images/products/design-24.png",
     "artist": null,
     "description": "Le ciré jaune breton, capuche relevée — le vrai symbole du marin face au grain."
+  },
+  {
+    "id": "poisson-sac",
+    "name": "Poisson rouge",
+    "theme": "Animaux",
+    "category": "Animaux",
+    "stars": 4,
+    "price": 4490,
+    "gridW": 38,
+    "gridH": 46,
+    "tileSizeCm": 1.2,
+    "image": "images/products/design-27.png",
+    "artist": null,
+    "description": "Le poisson rouge gagné à la fête foraine, figé pour toujours dans son sac en mosaïque murale."
   }
 ]
